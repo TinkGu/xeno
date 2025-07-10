@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "outDir": "lib/ts",
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "jsx": "react",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "strict": true,
+    "strictFunctionTypes": false,
+    "skipLibCheck": true,
+    "declaration": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "stripInternal": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true
+  },
+  "include": ["src", "types"]
+}

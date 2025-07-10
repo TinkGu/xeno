@@ -1,0 +1,40 @@
+node_modules
+design
+packages/test
+dist
+lib/
+temp
+package-lock.json
+
+# system temp file
+.version
+$RECYCLE.BIN/
+.DS_Store
+*.log
+**/dist/**
+
+# ide files
+.idea
+.vuerc
+
+# vscode
+.vscode
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+.history
+
+# docs
+.umi
+.umi-production
+docs/docs/api/*
+docs/inject.dist.js
+tsconfig.docs.json
+
+# file-map
+
+/fetch/
+/react/
+/navigate/
