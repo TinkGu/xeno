@@ -1,0 +1,99 @@
+.ttd-param-table {
+  display: block;
+}
+
+.ttd-fn-param-table {
+  position: relative;
+  display: block;
+  padding-top: 10px;
+
+  &::before {
+    content: '参 数';
+    position: absolute;
+    padding-top: 16px;
+    padding-right: 10px;
+    transform: translateX(-100%);
+    font-size: 13px;
+    font-weight: 200;
+    color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.ttd-param-table-row {
+  display: flex;
+  width: 100%;
+  min-height: 74px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  font-size: 15px;
+}
+
+.ttd-param-name-box {
+  flex-shrink: 0;
+  display: block;
+  margin-right: 24px;
+  padding: 16px 0;
+  width: 150px;
+  word-break: break-all;
+  text-align: right;
+
+  .ttd-sig-param-optional {
+    color: #999;
+  }
+}
+
+.ttd-param-name {
+  display: block;
+  font-weight: 400;
+  margin-bottom: 6px;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.ttd-param-desc-box {
+  flex-grow: 1;
+  display: block;
+  padding: 16px 0;
+  font-weight: 200;
+}
+
+.ttd-param-type {
+  margin-bottom: 4px;
+  display: block;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+  .ttd-sig-param-type,
+  .ttd-sig-refer,
+  .ttd-sig-union-item {
+    color: #715be8;
+  }
+}
+
+.ttd-param-desc {
+  display: block;
+  font-size: 13px;
+}
+
+.ttd-enum-table-row {
+  .ttd-enum-comment {
+    display: inline-block;
+    padding-bottom: 4px;
+  }
+  .ttd-param-type {
+    display: none;
+  }
+
+  .ttd-enum-member-row {
+    display: block;
+    padding-bottom: 6px;
+    font-weight: 400;
+  }
+
+  .ttd-enum-member-value {
+    color: #715be8;
+  }
+  .ttd-enum-member-comment {
+    margin-left: 20px;
+    font-weight: 200;
+  }
+}

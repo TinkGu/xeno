@@ -1,0 +1,175 @@
+@import (reference) '../styles/extra-vars.less';
+
+.__dumi-default-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 64px;
+  padding: 24px 0;
+  min-height: 100vh;
+  width: 260px;
+  background: #ffffff;
+
+  [data-prefers-color='dark'] & {
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  z-index: 100;
+  box-sizing: border-box;
+  transition: left 0.3s;
+  overflow-y: auto;
+
+  &-inner {
+    width: 100%;
+    overscroll-behavior: contain;
+
+    [data-prefers-color='dark'] & {
+      background-color: #262626;
+    }
+
+    // common list styles
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-size: 16px;
+
+      a {
+        color: #314659;
+      }
+
+      li {
+        margin-bottom: 8px;
+        span.xeno-doc-menu-child {
+          padding-left: 40px;
+        }
+        span.adm-doc-group-title {
+          background: transparent !important;
+          border: none !important;
+        }
+        span.xeno-doc-title-zh {
+          margin-left: 6px;
+          font-weight: 400;
+          font-size: 12px;
+          opacity: 0.67;
+        }
+        span.xeno-doc-menu-family {
+          display: block;
+          font-size: 12px;
+          padding: 4px 16px 8px 32px;
+          color: #8c8b8c !important;
+          background: 0 0 !important;
+          border-bottom: 1px solid #ebedf0;
+        }
+        a {
+          position: relative;
+          display: block;
+          line-height: 2.4;
+          text-decoration: none;
+          outline: none;
+
+          [data-prefers-color='dark'] & {
+            color: rgba(255, 255, 255, 0.85);
+          }
+
+          &:hover,
+          &.active {
+            color: #1677ff;
+
+            [data-prefers-color='dark'] & {
+              color: #7395f7;
+            }
+          }
+
+          > span {
+            display: block;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            padding: 8px 16px 8px 32px;
+            box-sizing: border-box;
+            font-size: 14px;
+            line-height: 22px;
+          }
+          &.active > span {
+            background-color: rgba(22, 119, 255, 0.08);
+            border-right: #1677ff solid 2px;
+          }
+        }
+
+        // level larger, offset larger, font size smaller
+        ul {
+          font-size: 0.9em;
+        }
+      }
+    }
+
+    // 1-level list styles
+    > ul {
+      > li > a {
+        line-height: 2.875;
+
+        &:not([href]) {
+          cursor: default;
+          padding: 24px 25px 0 32px;
+          > span {
+            display: block;
+            font-size: 14px;
+            line-height: 1;
+            padding: 0 0 8px 0;
+            color: #8c8b8c !important;
+            background: transparent !important;
+            border-bottom: #ebedf0 solid 1px;
+          }
+        }
+      }
+
+      > li:first-child > a:not([href]) {
+        padding-top: 0;
+      }
+    }
+
+    // n-level list styles
+    > ul ul {
+      a {
+        font-weight: normal;
+        &.active {
+          color: #1677ff;
+        }
+      }
+    }
+
+    // menu list
+    .__dumi-default-menu-list {
+      padding: 8px 0;
+
+      > li > a {
+        @c-active-bg: #e8ecf4;
+
+        ~ ul {
+          margin-top: 8px;
+        }
+
+        @media only screen and (max-width: 767px) {
+          padding-left: 16px;
+        }
+      }
+    }
+  }
+
+  border-right: 1px solid #e6e6e6;
+
+  .__dumi-default-menu-list {
+    > li > a {
+      position: relative;
+
+      &.active {
+        z-index: 1;
+      }
+    }
+  }
+
+  .DocSearch-Button {
+    margin: 0 12px;
+  }
+}

@@ -1,0 +1,85 @@
+.markdown,
+.__xeno-dumi-default-layout .markdown {
+  font-size: 14px;
+  color: #314659;
+
+  a {
+    color: #1677ff;
+  }
+
+  h1 {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    font-size: 30px;
+  }
+
+  h2 {
+    margin: 42px 0 12px !important;
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+
+  h5 {
+    font-size: 15px;
+  }
+
+  h6 {
+    font-size: 14px;
+  }
+
+  strong {
+    border-bottom: solid #ffe7b2 4px;
+    font-weight: 600;
+  }
+
+  li > strong {
+    border-bottom: none;
+  }
+
+  *:not(pre) code {
+    font-size: 13px;
+    border-radius: 4px;
+    color: #715be8;
+  }
+
+  details {
+    .markdown {
+      padding-left: 24px;
+    }
+  }
+
+  .typedoc-signature-prefix {
+    position: relative;
+    top: 4px;
+    display: inline-block;
+    margin-left: 2px;
+    margin-right: 12px;
+    width: 2px;
+    height: 18px;
+    background: #4569d4;
+  }
+
+  h2 > a[aria-hidden] {
+    float: left;
+    margin-top: 0.06em;
+    margin-left: -20px;
+    width: 20px;
+    padding-right: 4px;
+    line-height: 1;
+    box-sizing: border-box;
+
+    &::after {
+      content: '#';
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 20px;
+    }
+  }
+}

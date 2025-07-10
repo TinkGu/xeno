@@ -1,0 +1,63 @@
+.ttd-sig {
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  tab-size: 4;
+  hyphens: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &.ttd-sig-fn {
+    z-index: 1;
+    display: block;
+    padding: 12px 18px;
+    color: #999;
+    background-color: rgba(37, 37, 38, 0.85);
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow-x: auto;
+    font-size: 12px;
+  }
+
+  .ttd-sig-kind {
+    color: #c792ea;
+  }
+
+  .ttd-sig-param-optional {
+    color: #00bff9;
+  }
+
+  .ttd-sig-name {
+    color: #fff;
+  }
+
+  .ttd-sig-param-name {
+    color: #fff;
+  }
+
+  .ttd-sig-param-type,
+  .ttd-sig-refer,
+  .ttd-sig-union-item {
+    color: #aaddff;
+  }
+
+  .ttd-sig-refer {
+    &.more {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  .ttd-sig-returntype {
+    .ttd-sig-param-type,
+    .ttd-sig-refer,
+    .ttd-sig-union-item {
+      color: #bcf0c0;
+    }
+  }
+}
