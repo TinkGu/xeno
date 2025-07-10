@@ -26,8 +26,8 @@
     "start": "yarn build && yarn docs",
     "lint": "eslint src --quiet --ext ts,tsx,js,jsx",
     "lint:ts": "tsc --noEmit",
-    "docs": "yarn docs:inject && yarn docs:ts -c && cross-env APP_ROOT=docs dumi dev",
-    "docs:build": "node -v && yarn docs:inject && yarn docs:ts-prod && cross-env APP_ROOT=docs dumi build",
+    "docs": "yarn docs:inject && yarn docs:ts -c && cross-env APP_ROOT=docs NODE_OPTIONS=--openssl-legacy-provider dumi dev",
+    "docs:build": "node -v && yarn docs:inject && yarn docs:ts-prod && cross-env APP_ROOT=docs NODE_OPTIONS=--openssl-legacy-provider dumi build",
     "docs:ts": "node docs/ts-doc-parser -d",
     "docs:ts-prod": "node docs/ts-doc-parser -c",
     "docs:inject": "node docs/inject",
@@ -100,6 +100,6 @@
     "typedoc": "0.22.9"
   },
   "engines": {
-    "node": "^10.12.0 || >=12.0.0"
+    "node": ">=18.0.0"
   }
 }
