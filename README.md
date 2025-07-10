@@ -1,5 +1,13 @@
 # @tinks/xeno
 
+📄 online site: [Xeno](https://tinkgu.github.io/xeno)
+
+## Quick Start
+
+```bash
+yarn add @tinks/xeno
+```
+
 ## develop
 
 - install
